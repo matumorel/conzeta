@@ -8,7 +8,7 @@ export function AboutSection() {
             Nuestra perspectiva
           </h2>
 
-          <div className="mt-8">
+          <div className="mt-20">
             <ul className="flex flex-col items-start gap-2 text-left text-lg leading-relaxed">
               <li style={{ color: '#ac83ff' }}>Con otras miradas</li>
               <li style={{ color: '#ac83ff' }}>Con datos</li>
