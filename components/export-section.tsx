@@ -24,7 +24,7 @@ export function ExportSection() {
 
         <div className="relative">
           <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">
-            03 / Quiero exportar
+            03 / comercio internacional
           </p>
           <h2 className="mt-7 max-w-3xl text-3xl leading-[1.12] tracking-tight text-balance sm:text-4xl lg:text-5xl">
             ¿Pensás en exportar? Bien: pensar es el primer paso.
@@ -50,7 +50,7 @@ export function ExportSection() {
             {DECISION_POINTS.map((point) => (
               <p
                 key={point}
-                className="border-b border-border py-3 text-lg font-black leading-snug text-brand-violet last:border-b-0"
+                className="border-b border-border py-3 text-lg font-normal leading-snug text-brand-violet last:border-b-0"
               >
                 {point}
               </p>
