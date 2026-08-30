@@ -12,8 +12,7 @@ export function HeroSection() {
           <span style={{ color: '#ac83ff' }}>direcci&oacute;n.</span>
         </h1>
         <p className="mt-7 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground">
-          Ordenamos lo disperso, conectamos lo que estaba suelto y acompa&ntilde;amos cada decisi&oacute;n
-          con m&eacute;todo y criterio.
+          Desde la comunicación, articulamos estrategia, gestión, desarrollo comercial y comercio internacional para ordenar decisiones, activar oportunidades y acompa&ntilde;ar el crecimiento.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
