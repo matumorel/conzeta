@@ -50,7 +50,7 @@ export function ExportSection() {
             {DECISION_POINTS.map((point) => (
               <p
                 key={point}
-                className="border-b border-border py-3 text-lg font-black leading-snug text-brand-violet last:border-b-0"
+                className="border-b border-border py-3 text-lg font-normal leading-snug text-brand-violet last:border-b-0"
               >
                 {point}
               </p>
