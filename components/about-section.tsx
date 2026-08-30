@@ -9,7 +9,7 @@ export function AboutSection() {
           </h2>
 
           <div className="mt-8">
-            <ul className="flex flex-col items-center gap-2 text-center text-lg leading-relaxed">
+            <ul className="flex flex-col items-start gap-2 text-left text-lg leading-relaxed">
               <li style={{ color: '#ac83ff' }}>Con otras miradas</li>
               <li style={{ color: '#ac83ff' }}>Con datos</li>
               <li style={{ color: '#ac83ff' }}>Con otras experiencias</li>
