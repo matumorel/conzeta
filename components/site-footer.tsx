@@ -17,7 +17,7 @@ export function SiteFooter() {
           <span className="text-sm text-foreground">ConZeta Consultora</span>
         </div>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} ConZeta. Lorem ipsum dolor sit amet.
+          © {new Date().getFullYear()} ConZeta. Santa Fe, Santa Fe, Argentina
         </p>
       </div>
     </footer>

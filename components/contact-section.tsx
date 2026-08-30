@@ -36,10 +36,12 @@ export function ContactSection() {
         <div className="flex flex-col gap-5">
           <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">04 / Contacto</p>
           <h2 className="text-3xl leading-tight tracking-tight text-balance sm:text-4xl">Hablemos de tu empresa</h2>
-          <p className="leading-relaxed text-pretty text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-          </p>
+          <div className="flex flex-col gap-2">
+            <h3 className="text-xl leading-tight text-pretty text-[#663399]">¿Un consejo? Consultá</h3>
+            <p className="leading-relaxed text-pretty text-[#ac83ff]">
+              No tenés que pensar en todo. Pero todos podemos pensar en tu marca.
+            </p>
+          </div>
 
           <ul className="mt-4 flex flex-col gap-4 border-t border-border pt-8">
             {[
