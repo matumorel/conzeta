@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { id: 'inicio', label: 'Inicio' },
   { id: 'quienes-somos', label: 'Nuestra perspectiva' },
   { id: 'que-hacemos', label: 'Qué hacemos' },
-  { id: 'informes', label: 'Informes' },
+  { id: 'quiero-exportar', label: 'Quiero exportar' },
   { id: 'contacto', label: 'Contacto' },
 ]
 
