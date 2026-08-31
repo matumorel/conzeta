@@ -14,7 +14,7 @@ const alanSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'ConZeta | Consultora empresarial',
+  title: 'ConZeta | Consultora estratégica y comercial',
   description:
     'ConZeta Consultora: estrategia, gestión e informes para empresas que necesitan decisiones respaldadas por datos.',
   generator: 'v0.app',
