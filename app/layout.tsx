@@ -18,10 +18,6 @@ export const metadata: Metadata = {
   description:
     'ConZeta Consultora: estrategia, gestión e informes para empresas que necesitan decisiones respaldadas por datos.',
   generator: 'v0.app',
-  icons: {
-    icon: '/conzeta-logo-menu.png',
-    apple: '/conzeta-logo-menu.png',
-  },
 }
 
 export const viewport: Viewport = {
