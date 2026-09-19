@@ -14,10 +14,33 @@ const alanSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'ConZeta | Consultora estratégica y comercial',
+  metadataBase: new URL('https://conzeta.com.ar'),
+  title: {
+    default: 'ConZeta | Consultora estratégica y comercial',
+    template: '%s | ConZeta',
+  },
   description:
     'ConZeta Consultora: estrategia, gestión e informes para empresas que necesitan decisiones respaldadas por datos.',
+  applicationName: 'ConZeta',
   generator: 'v0.app',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_AR',
+    url: 'https://conzeta.com.ar',
+    siteName: 'ConZeta',
+    title: 'ConZeta | Consultora estratégica y comercial',
+    description:
+      'ConZeta Consultora: estrategia, gestión e informes para empresas que necesitan decisiones respaldadas por datos.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ConZeta | Consultora estratégica y comercial',
+    description:
+      'ConZeta Consultora: estrategia, gestión e informes para empresas que necesitan decisiones respaldadas por datos.',
+  },
 }
 
 export const viewport: Viewport = {
