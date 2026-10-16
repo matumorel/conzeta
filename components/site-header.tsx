@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -16,13 +17,20 @@ const NAV_ITEMS = [
 const HEADER_OFFSET = 76
 
 export function SiteHeader() {
-  const [active, setActive] = useState('inicio')
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+  const [active, setActive] = useState(isHome ? 'inicio' : '')
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 8)
+
+      if (!isHome) {
+        setActive('')
+        return
+      }
 
       const fromTop = window.scrollY + HEADER_OFFSET + 24
       let current = NAV_ITEMS[0].id
@@ -43,9 +51,10 @@ export function SiteHeader() {
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
     }
-  }, [])
+  }, [isHome])
 
   const goTo = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (!isHome) return
     event.preventDefault()
     const el = document.getElementById(id)
     if (!el) return
@@ -65,7 +74,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between gap-6 px-5 lg:px-8">
         <a
-          href="#inicio"
+          href={isHome ? '#inicio' : '/#inicio'}
           onClick={(e) => goTo(e, 'inicio')}
           className="flex shrink-0 items-center gap-3"
           aria-label="conZeta, ir al inicio"
@@ -90,7 +99,7 @@ export function SiteHeader() {
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
+              href={`${isHome ? '' : '/'}#${item.id}`}
               onClick={(e) => goTo(e, item.id)}
               aria-current={active === item.id ? 'true' : undefined}
               className={cn(
@@ -113,7 +122,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#contacto"
+            href={isHome ? '#contacto' : '/#contacto'}
             onClick={(e) => goTo(e, 'contacto')}
             className="hidden rounded-md bg-primary px-4 py-2.5 text-sm text-primary-foreground transition-opacity hover:opacity-90 lg:inline-flex"
           >
@@ -141,7 +150,7 @@ export function SiteHeader() {
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
+              href={`${isHome ? '' : '/'}#${item.id}`}
               onClick={(e) => goTo(e, item.id)}
               className={cn(
                 'border-b border-border/70 py-3 text-sm last:border-b-0',
